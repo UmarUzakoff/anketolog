@@ -1,0 +1,116 @@
+.header{
+    @extend .container;
+    display: flex;
+    flex-direction: row;
+    margin-top: 16px;
+
+
+    &__rightside{
+        background-color: $text-color;
+        border-radius: 0 40px 40px 0;
+        max-width: 320px;
+        cursor: pointer;
+
+        &__logo{
+            padding: 19px 74px 19px 19px;
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+        }
+    }
+
+   
+
+    &__nav{
+        margin: 0, auto;
+        align-self: center;
+        margin-left: 250px;
+        
+        ul{
+            display: flex;
+            flex-direction: row;
+            gap: 40px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 15px;
+
+            a{
+                color: $text-color;
+            }
+        }
+    }
+
+    &__question{
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        margin-left: 250px;
+        cursor: pointer;
+    }
+}
+
+@media (min-width:1920px){
+    .header-rightside__responsive1{
+        display: none;
+    }
+    .header-rightside__responsive2{
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .header__rightside{
+        background-color: initial;
+    }
+
+    .header__nav{
+        display: none;
+    }
+    
+    .header-rightside{
+        display: none;
+    }
+
+    .header-rightside__responsive1{
+        display: initial;
+    }
+
+    .header-rightside__responsive2{
+        display: initial;
+    }
+
+    .header{
+        height: 75px;
+        background-color: $text-color;
+        margin-top: 0;
+    }
+
+    .header__question{
+        margin: 16px 40px 16px 300px;
+    }
+
+    .body{
+        background-image: url(/images/body-back-responsive.jpg);
+    }
+}
+
+@media (max-width:320px) {
+
+    .header__rightside__logo__anketolog{
+        display: none;
+    }
+
+    .body{
+        background-image: url(/images/body-back-tel.jpg);
+    }
+
+    .header__question{
+            margin: 16px 10px 16px 50px;
+    }
+    
+    .header-rightside__responsive1{
+        display: none;
+    }
+}
